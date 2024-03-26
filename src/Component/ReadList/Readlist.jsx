@@ -30,7 +30,7 @@ const Readlist = () => {
             const addedBook = books.filter(book => bookStoredInlc.includes(book.bookId));
             setBookadd([...addedBook]);
             setDisplayData([...addedBook]);
-            
+
         }
     }, [books]);
     
@@ -92,7 +92,7 @@ const Readlist = () => {
                                             <p>Page {book.totalPages}</p>
                                         </div>
                                     </div>
-                                    <div className='pt-2 flex gap-5'>
+                                    <div className='pt-2 flex md:gap-5'>
                                         <button className="btn rounded-3xl">Category : {book.category}</button>
                                         <button className="btn rounded-3xl">Rating : {book.rating}</button>
                                         <Link to={`/book/${book.bookId}`}>
