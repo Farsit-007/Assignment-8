@@ -14,7 +14,7 @@ const Gallery = () => {
 
                     </div>
                 </div>
-                <img src={bg} width={800} alt="" className=" mx-auto mb-12 -mt-[300px]  rounded-lglg:-mt-40" />
+                <img src={bg} width={800} alt="" className=" mx-auto mb-0 md:mb-12 -mt-[150px] md:-mt-[300px]  rounded-lglg:-mt-40" />
             </section>
 
 
