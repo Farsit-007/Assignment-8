@@ -9,6 +9,7 @@ const Header = () => {
         </li>
         <li><NavLink to="/listedBook" className={({ isActive }) => isActive ? 'text-green-400 focus:text-green-400  border border-green-400 font-bold' : 'font-bold'}  style={{ background: 'transparent' }} >Listed Books</NavLink></li>
         <li><NavLink to="/pagetoRead" className={({ isActive }) => isActive ? 'text-green-400 border border-green-400 font-bold focus:text-green-400 ' : 'font-bold'}  style={{ background: 'transparent' }} >Pages to Read</NavLink></li>
+        <li><NavLink to="/gallery" className={({ isActive }) => isActive ? 'text-green-400 border border-green-400 font-bold focus:text-green-400 ' : 'font-bold'}  style={{ background: 'transparent' }} >Gallery</NavLink></li>
 
     </>
     return (

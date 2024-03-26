@@ -13,6 +13,7 @@ import Wishlist from './Component/Wishlist/Wishlist';
 import Readlist from './Component/ReadList/Readlist';
 import PageToRead from './Component/PagetoRead/PageToRead';
 import ErrorPage from './Component/ErrorPage/ErrorPage';
+import Gallery from './Component/Gallery/Gallery';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
         path : '/pagetoread',
         element : <PageToRead></PageToRead>,
         loader : ()=> fetch('/data.json')
+      },
+      {
+        path : '/gallery',
+        element : <Gallery></Gallery>,
       },
 
     ]
