@@ -24,7 +24,7 @@ const Contact = () => {
     return (
         <div>
             <section className="py-6">
-                <div className="rounded-xl bg-slate-50" style={{ backgroundImage: `url(${bgg})` }}>
+                <div className="rounded-xl bg-slate-50 bg-cover" style={{ backgroundImage: `url(${bgg})` }}>
                     <div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 text-gray-900">
                         <h1 className="text-5xl font-bold leading-none sm:text-7xl xl:max-w-3xl text-white playfair">Contact</h1>
                         <p className="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl text-white workSans">Connect with us for book recommendations, collaborations, technical support, and more. We welcome your feedback and inquiries. Reach out and lets start a conversation</p>
@@ -62,17 +62,17 @@ const Contact = () => {
                     </div>
                     <form onSubmit={handleSubmit} className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                         <label className="block">
-                            <input ref={nameref} type="text" placeholder="Name" className="outline-none block w-full shadow-sm border p-3 rounded-3xl focus:ring focus:ring-opacity-75 focus:dark:ring-[#23BE0A] dark:bg-gray-200" />
+                            <input ref={nameref} type="text" placeholder="Name" className="outline-none block w-full shadow-sm border p-3 rounded-3xl focus:ring focus:ring-opacity-75 focus:dark:ring-[#23BE0A] dark:bg-gray-200" required/>
                         </label>
                         <label className="block">
 
-                            <input ref={emailref} type="email" placeholder="Email" className="block outline-none w-full shadow-sm border p-3 rounded-3xl focus:ring focus:ring-opacity-75 focus:dark:ring-[#23BE0A] dark:bg-gray-200" />
+                            <input ref={emailref} type="email" placeholder="Email" className="block outline-none w-full shadow-sm border p-3 rounded-3xl focus:ring focus:ring-opacity-75 focus:dark:ring-[#23BE0A] dark:bg-gray-200" required/>
                         </label>
                         <label className="block">
 
                             <textarea ref={msgref} placeholder='Message' rows="3" className="block outline-none w-full shadow-sm border p-3 rounded-3xl focus:ring focus:ring-opacity-75 focus:dark:ring-[#23BE0A] dark:bg-gray-200"></textarea>
                         </label>
-                        <button className="self-center px-8 py-3 text-lg rounded-2xl focus:ring hover:ring focus:ring-opacity-75 dark:bg-[#23BE0A] dark:text-gray-50 focus:dark:ring-[#23BE0A] hover:dark:ring-[#23BE0A]">Submit</button>
+                        <button className="self-center workSans font-medium px-8 py-3 text-lg rounded-2xl focus:ring hover:ring focus:ring-opacity-75 dark:bg-[#23BE0A] dark:text-gray-50 focus:dark:ring-[#23BE0A] hover:dark:ring-[#23BE0A]">Submit</button>
                     </form>
                 </div>
             </section>
