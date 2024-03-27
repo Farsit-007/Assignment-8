@@ -1,16 +1,17 @@
 import { NavLink } from "react-router-dom";
+import '../../Font/Font.css'
 const Header = () => {
 
     const Links = <>
-        <li>
-            <NavLink to="/" className={({ isActive }) => isActive ? 'text-green-400 focus:text-green-400 border border-green-400 font-bold' : 'font-bold'} style={{ background: 'transparent' }} >
+        <li className="workSans text-lg">
+            <NavLink to="/" className={({ isActive }) => isActive ? 'text-green-400 focus:text-green-400 border border-green-400 font-medium' : 'font-medium'} style={{ background: 'transparent' }} >
                 Home
             </NavLink>
         </li>
-        <li><NavLink to="/listedBook" className={({ isActive }) => isActive ? 'text-green-400 focus:text-green-400  border border-green-400 font-bold' : 'font-bold'}  style={{ background: 'transparent' }} >Listed Books</NavLink></li>
-        <li><NavLink to="/pagetoRead" className={({ isActive }) => isActive ? 'text-green-400 border border-green-400 font-bold focus:text-green-400 ' : 'font-bold'}  style={{ background: 'transparent' }} >Pages to Read</NavLink></li>
-        <li><NavLink to="/gallery" className={({ isActive }) => isActive ? 'text-green-400 border border-green-400 font-bold focus:text-green-400 ' : 'font-bold'}  style={{ background: 'transparent' }} >Gallery</NavLink></li>
-        <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'text-green-400 border border-green-400 font-bold focus:text-green-400 ' : 'font-bold'}  style={{ background: 'transparent' }} >Contact</NavLink></li>
+        <li className="workSans text-lg"><NavLink to="/listedBook" className={({ isActive }) => isActive ? 'text-green-400 focus:text-green-400  border border-green-400 font-medium' : 'font-medium'}  style={{ background: 'transparent' }} >Listed Books</NavLink></li>
+        <li className="workSans text-lg"><NavLink to="/pagetoRead" className={({ isActive }) => isActive ? 'text-green-400 border border-green-400 font-medium focus:text-green-400 ' : 'font-medium'}  style={{ background: 'transparent' }} >Pages to Read</NavLink></li>
+        <li className="workSans text-lg"><NavLink to="/gallery" className={({ isActive }) => isActive ? 'text-green-400 border border-green-400 font-medium focus:text-green-400 ' : 'font-medium'}  style={{ background: 'transparent' }} >Gallery</NavLink></li>
+        <li className="workSans text-lg"><NavLink to="/contact" className={({ isActive }) => isActive ? 'text-green-400 border border-green-400 font-medium focus:text-green-400 ' : 'font-medium'}  style={{ background: 'transparent' }} >Contact</NavLink></li>
 
     </>
     return (
@@ -25,7 +26,7 @@ const Header = () => {
                             {Links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Book Vibe</a>
+                    <a className="btn btn-ghost text-2xl sm:text-[28px] workSans font-bold">Book Vibe</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -33,8 +34,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-3">
-                    <a className="btn bg-[#23BE0A] text-white">Sign in</a>
-                    <a className="btn bg-[#59C6D2] text-white">Sign up</a>
+                    <a className="btn bg-[#23BE0A] text-white workSans text-lg font-semibold">Sign in</a>
+                    <a className="btn bg-[#59C6D2] text-white workSans text-lg font-semibold">Sign up</a>
                 </div>
             </div>
 

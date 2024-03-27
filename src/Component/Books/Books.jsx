@@ -6,7 +6,7 @@ const Books = () => {
     return (
         <div className="my-16">
             <div className="flex justify-center items-center">
-                <h1 className="text-5xl font-semibold">Books</h1>
+                <h1 className="text-[40px] font-bold playfair">Books</h1>
             </div>
             <div className="grid md:grid-cols-2 gap-8 lg:grid-cols-3" >
                {
