@@ -1,4 +1,4 @@
-
+import { Toaster } from 'react-hot-toast';
 import { useRef } from 'react';
 import bgg from '../../assets/bgg.jpg'
 import bg3 from '../../assets/call.png'
@@ -76,6 +76,7 @@ const Contact = () => {
                     </form>
                 </div>
             </section>
+            <Toaster />
         </div>
     );
 };

@@ -56,6 +56,9 @@ const savedData= (val) =>{
     const sotreddata = getStoredBook();
     sotreddata.push(val);
     localStorage.setItem('data',JSON.stringify(sotreddata));
+    toast('Thank you for contacting us', {
+        icon: '💬',
+      });
 }
 
 export {getStoredBook,savedBookDetails,savedBookDetails2,getStoredBook2,getStoredform,savedData}
