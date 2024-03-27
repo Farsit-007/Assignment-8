@@ -9,8 +9,8 @@ const Gallery = () => {
             <section className="py-6">
                 <div className="rounded-xl bg-slate-50" style={{ backgroundImage: `url(${bg2})` }}>
                     <div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 text-gray-900">
-                        <h1 className="text-5xl font-bold leading-none sm:text-7xl xl:max-w-3xl text-white">Gallery</h1>
-                        <p className="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl text-white">Explore our captivating book gallery, brimming with a vibrant selection of literary treasures, inviting you to discover new favorites and delight in the beauty of book cover art.</p>
+                        <h1 className="text-5xl font-bold leading-none sm:text-7xl xl:max-w-3xl text-white playfair">Gallery</h1>
+                        <p className="mt-6 mb-8 text-lg workSans sm:mb-12 xl:max-w-3xl text-white">Explore our captivating book gallery, brimming with a vibrant selection of literary, inviting you to discover new favorites and delight in the beauty of book cover art.</p>
 
                     </div>
                 </div>
@@ -20,7 +20,7 @@ const Gallery = () => {
 
             <section className="">
 
-                <h1 className='text-center py-6  text-5xl font-bold leading-none sm:text-5xl'>Books Gallery</h1>
+                <h1 className='text-center py-6 playfair text-5xl font-bold leading-none sm:text-5xl'>Books Gallery</h1>
 
                 <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
                     <img src="https://i.ibb.co/jgjTZRh/i.jpg" alt="" className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 bg-gray-500 aspect-square" />
@@ -38,8 +38,8 @@ const Gallery = () => {
 
             <section className="py-6">
                 <div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
-                    <h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">Our team</h1>
-                    <p className="max-w-2xl text-center text-gray-400">Our dedicated team of book enthusiasts is committed to curating a diverse collection of literature, ensuring readers have access to a rich tapestry of stories that inspire, entertain, and enrich lives.</p>
+                    <h1 className="text-4xl font-bold leading-none playfair text-center sm:text-5xl">Our team</h1>
+                    <p className="max-w-2xl text-center text-gray-400 workSans ">Our dedicated team of book enthusiasts is committed to curating a diverse collection of literature, ensuring readers have access to a rich tapestry of stories that inspire, entertain, and enrich lives.</p>
                     <div className="flex flex-row flex-wrap-reverse justify-center">
                         <div className="flex flex-col justify-center m-8 text-center">
                             <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://i.ibb.co/N9GmQKQ/32988.jpg" />

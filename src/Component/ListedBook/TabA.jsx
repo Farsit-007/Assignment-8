@@ -40,7 +40,7 @@ const TabA = () => {
            <div>
                 <div className="flex  justify-center items-center mb-8">
                     <details className="dropdown">
-                        <summary className="m-1 btn">Sorted By <IoIosArrowDown /></summary>
+                        <summary className="m-1 btn bg-[#23BE0A] text-white text-lg font-semibold workSans">Sorted By <IoIosArrowDown /></summary>
                         <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-32">
                             <li><button onClick={() => handleSort("Rating")}>Rating</button></li>
                             <li><button onClick={() => handleSort("Number of Page")}>Number of Page</button></li>
@@ -49,11 +49,11 @@ const TabA = () => {
                     </details>
                 </div>
             </div>
-         <div className=''>
+         <div className='workSans text-[#131313CC] text-lg'>
          <Tabs  selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
-                    <Tab>Read Book</Tab>
-                    <Tab>Wishlist</Tab>
+                    <Tab >Read Books</Tab>
+                    <Tab>Wishlist Books</Tab>
                 </TabList>
                 <TabPanel>
                     <Readlist displayData={displayData} />

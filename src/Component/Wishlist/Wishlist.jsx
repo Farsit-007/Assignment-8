@@ -30,8 +30,8 @@ const Wishlist = () => {
                             <div className="card-body md:w-[65%] p-1 pt-2 pr-5 md:pl-10">
                                 <div className='flex space-y2 flex-col justify-between'>
                                     <div className=''>
-                                        <h2 className="card-title text-3xl">{book.bookName}</h2>
-                                        <p className="py-2">By : {book.author}</p>
+                                        <h2 className="card-title text-3xl playfair font-bold">{book.bookName}</h2>
+                                        <p className="py-2 workSans font-medium text-[16px]">By : {book.author}</p>
                                     </div>
                                     <div className="flex flex-col md:flex-row items-center gap-10">
                                         <div className="flex gap-3 my-2 items-center " >
@@ -41,33 +41,33 @@ const Wishlist = () => {
                                             <div className="flex gap-3  items-center">
                                                 {
                                                     book.tags.map(tag => (
-                                                        <button className="btn font-medium text-[#23BE0A] rounded-3xl py-0 px-6" key={book.bookId}>
+                                                        <button className="btn workSans bg-[#23BE0A0D] text-[16px] font-medium text-[#23BE0A] rounded-3xl py-0 px-6" key={book.bookId}>
                                                             #{tag}
                                                         </button>
                                                     ))
                                                 }
                                             </div>
                                         </div>
-                                        <div className="flex  gap-2 items-center">
+                                        <div className="flex workSans text-[16px]  gap-2 items-center">
                                             <IoLocationOutline size={25} />
                                             <p>Year of Publishing : {book.yearOfPublishing}</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-6 border-b p-3">
-                                        <div className="flex items-center gap-4">
+                                        <div className="flex workSans text-[16px] items-center gap-4">
                                             <GoPeople size={20} />
                                             <p>Publisher : {book.publisher}</p>
                                         </div>
-                                        <div className="flex items-center gap-4">
+                                        <div className="flex workSans text-[16px] items-center gap-4">
                                             <TbPageBreak size={25} />
                                             <p>Page {book.totalPages}</p>
                                         </div>
                                     </div>
                                     <div className='pt-2 flex gap-5'>
-                                        <button className="btn rounded-3xl">Category : {book.category}</button>
-                                        <button className="btn rounded-3xl">Rating : {book.rating}</button>
+                                        <button className="btn bg-[#328EFF26] text-[#328EFF]  workSans text-[16px]  rounded-3xl">Category : {book.category}</button>
+                                        <button className="btn rounded-3xl bg-[#FFAC3326] text-[#FFAC33] workSans text-[16px] ">Rating : {book.rating}</button>
                                         <Link to={`/book/${book.bookId}`}>
-                                            <button className="btn rounded-3xl">View Details</button>
+                                            <button className="btn  rounded-3xl workSans font-semibold text-lg  bg-[#23BE0A] text-white">View Details</button>
                                         </Link>
                                     </div>
                                 </div>
