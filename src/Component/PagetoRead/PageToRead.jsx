@@ -31,9 +31,8 @@ const PageToRead = () => {
     }, [books]);
 
     return (
-        <div className='flex items-center w-full justify-center md:h-[550px]'>
-            
-            <BarChart
+        <div className='flex items-center w-full justify-center md:h-[550px] overflow-x-auto'> {/* Added overflow-x-auto here */}
+            <BarChart 
                 width={bookadd.length * 200} 
                 height={500}
                 data={bookadd}
@@ -45,10 +44,10 @@ const PageToRead = () => {
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="bookName" interval={0} angle={-40} textAnchor="end" height={120} />
+                <XAxis  dataKey="bookName" interval={0} angle={-40} textAnchor="end" height={120} />
                 <YAxis />
                 <Tooltip />
-                <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                <Bar className='overflow-x-auto' dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
                     {bookadd.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                     ))}

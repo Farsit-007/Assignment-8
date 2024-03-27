@@ -1,54 +1,14 @@
+/* eslint-disable react/prop-types */
 import { IoLocationOutline } from "react-icons/io5";
-import { useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
-import { getStoredBook } from "../../Utility/Utility";
+import { Link} from "react-router-dom";
 import { GoPeople } from "react-icons/go";
-import { IoIosArrowDown } from "react-icons/io";
 import { TbPageBreak } from "react-icons/tb";
 
-const Readlist = () => {
-    const books = useLoaderData();
-    const [bookadd, setBookadd] = useState([]);
-    const [displayData, setDisplayData] = useState([]);
-
-    const handleSort = (option) => {
-        if (option === 'Rating') {
-            const sortedPage = bookadd.sort((a, b) => b.rating - a.rating);
-            setDisplayData([...sortedPage]);
-        } else if (option === 'Number of Page') {
-            const sortedPage = bookadd.sort((a, b) => a.totalPages - b.totalPages);
-            setDisplayData([...sortedPage]);
-        } else if (option === 'Publisher') {
-            const sortedPage = bookadd.sort((a, b) => a.publisher.localeCompare(b.publisher));
-            setDisplayData([...sortedPage]);
-        }
-    };
-
-    useEffect(() => {
-        const bookStoredInlc = getStoredBook();
-        if (bookStoredInlc.length > 0) {
-            const addedBook = books.filter(book => bookStoredInlc.includes(book.bookId));
-            setBookadd([...addedBook]);
-            setDisplayData([...addedBook]);
-
-        }
-    }, [books]);
-    
+const Readlist = ({displayData}) => {
+  
 
     return (
-        <><div className="relative">
-            <div>
-                <div className="flex absolute -top-20 left-48 md:left-[500px] justify-center items-center mb-8">
-                    <details className="dropdown">
-                        <summary className="m-1 btn">Sorted By <IoIosArrowDown /></summary>
-                        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-32">
-                            <li><button onClick={() => handleSort("Rating")}>Rating</button></li>
-                            <li><button onClick={() => handleSort("Number of Page")}>Number of Page</button></li>
-                            <li><button onClick={() => handleSort("Publisher")}>Publisher</button></li>
-                        </ul>
-                    </details>
-                </div>
-            </div>
+        <> <div className="my-10"> 
             {
                 displayData.map(book => (
                     <div key={book.bookId}>
@@ -105,7 +65,7 @@ const Readlist = () => {
                     </div>
                 ))
             }
-            </div>
+          </div>
         </>
     );
 };

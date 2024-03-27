@@ -14,6 +14,7 @@ import Readlist from './Component/ReadList/Readlist';
 import PageToRead from './Component/PagetoRead/PageToRead';
 import ErrorPage from './Component/ErrorPage/ErrorPage';
 import Gallery from './Component/Gallery/Gallery';
+import Contact from './Component/Contact/Contact';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path : '/gallery',
         element : <Gallery></Gallery>,
+      },
+      {
+        path : '/contact',
+        element : <Contact></Contact>,
       },
 
     ]

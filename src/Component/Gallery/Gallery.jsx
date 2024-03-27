@@ -42,32 +42,31 @@ const Gallery = () => {
                     <p className="max-w-2xl text-center text-gray-400">Our dedicated team of book enthusiasts is committed to curating a diverse collection of literature, ensuring readers have access to a rich tapestry of stories that inspire, entertain, and enrich lives.</p>
                     <div className="flex flex-row flex-wrap-reverse justify-center">
                         <div className="flex flex-col justify-center m-8 text-center">
-                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?0" />
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://i.ibb.co/N9GmQKQ/32988.jpg" />
                             <p className="text-xl font-semibold leading-tight">B.Robert</p>
                             <p className="text-gray-400">CEO</p>
                         </div>
                         <div className="flex flex-col justify-center m-8 text-center">
-                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?1" />
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://i.ibb.co/x3qnNnZ/2149944075.jpg" />
                             <p className="text-xl font-semibold leading-tight">Leroy Jenkins</p>
                             <p className="text-gray-400">Writer</p>
                         </div>
                         <div className="flex flex-col justify-center m-8 text-center">
-                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?2" />
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://i.ibb.co/nwV4XVS/15902.jpg" />
                             <p className="text-xl font-semibold leading-tight">P.Charle</p>
                             <p className="text-gray-400">Cover Designer</p>
                         </div>
                         <div className="flex flex-col justify-center m-8 text-center">
-                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?3" />
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://i.ibb.co/VYGbwWy/9861.jpg" />
                             <p className="text-xl font-semibold leading-tight">Marly Jenkins</p>
                             <p className="text-gray-400">Article Writer</p>
                         </div>
                         <div className="flex flex-col justify-center m-8 text-center">
-                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?4" />
-                            <p className="text-xl font-semibold leading-tight">Routh Paul</p>
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://i.ibb.co/ggG7fXX/confident-smiling-businesswoman-writing-notes.jpg"/><p>Routh Paul</p>
                             <p className="text-gray-400">Manager</p>
                         </div>
                         <div className="flex flex-col justify-center m-8 text-center">
-                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://source.unsplash.com/100x100/?portrait?5" />
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full bg-gray-500" src="https://i.ibb.co/Jk386Sx/portrait-young-man-while-studying-books.jpg" />
                             <p className="text-xl font-semibold leading-tight">Sevan t.</p>
                             <p className="text-gray-400">Visual Designer</p>
                         </div>

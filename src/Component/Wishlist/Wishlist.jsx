@@ -3,52 +3,25 @@ import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { getStoredBook2 } from "../../Utility/Utility";
 import { GoPeople } from "react-icons/go";
-import { IoIosArrowDown } from "react-icons/io";
 import { TbPageBreak } from "react-icons/tb";
 
 const Wishlist = () => {
     const books = useLoaderData();
     const [bookadd2, setBookadd2] = useState([]);
-    const [displayData, setDisplayData] = useState([]);
-
-    const handleSort = (option) => {
-        if (option === 'Rating') {
-            const sortedPage = bookadd2.sort((a, b) => b.rating - a.rating);
-            setDisplayData([...sortedPage]);
-        } else if (option === 'Number of Page') {
-            const sortedPage = bookadd2.sort((a, b) => a.totalPages - b.totalPages);
-            setDisplayData([...sortedPage]);
-        } else if (option === 'Publisher') {
-            const sortedPage = bookadd2.sort((a, b) => a.publisher.localeCompare(b.publisher));
-            setDisplayData([...sortedPage]);
-        }
-    };
-
+    
     useEffect(() => {
         const bookStoredInlc = getStoredBook2();
         if (bookStoredInlc.length > 0) {
             const addedBook = books.filter(book => bookStoredInlc.includes(book.bookId));
-            setBookadd2([...addedBook]);
-            setDisplayData([...addedBook]);
+            setBookadd2(addedBook);
         }
     }, [books]);
 
     return (
-        <><div className="relative">
-            <div >
-                <div className="flex absolute -top-20 left-48 md:left-[500px] justify-center items-center mb-8">
-                    <details className="dropdown">
-                        <summary className="m-1 btn">Sorted By <IoIosArrowDown /></summary>
-                        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-32">
-                            <li><button onClick={() => handleSort("Rating")}>Rating</button></li>
-                            <li><button onClick={() => handleSort("Number of Page")}>Number of Page</button></li>
-                            <li><button onClick={() => handleSort("Publisher")}>Publisher</button></li>
-                        </ul>
-                    </details>
-                </div>
-            </div>
+        <><div className="my-10">
+            
             {
-                displayData.map(book => (
+                bookadd2.map(book => (
                     <div key={book.bookId}>
                         <div className="card sm:card-side border-2 p-8 md:w-[97%] mt-3 mx-auto bg-base-100">
                             <div className="flex md:w-[35%] justify-center items-center rounded-xl  bg-[#F3F3F3]">

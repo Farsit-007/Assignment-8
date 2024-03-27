@@ -1,31 +1,68 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Wishlist from '../Wishlist/Wishlist';
 import Readlist from '../ReadList/Readlist';
 import { useLoaderData } from 'react-router-dom';
+import { IoIosArrowDown } from 'react-icons/io';
+import { getStoredBook } from '../../Utility/Utility';
 
 const TabA = () => {
     const [tabIndex, setTabIndex] = useState(0);
     const books = useLoaderData();
-     console.log(books)
-   
+    const [bookadd, setBookadd] = useState([]);
+    const [displayData, setDisplayData] = useState([]);
+
+    const handleSort = (option) => {
+        if (option === 'Rating') {
+            const sortedPage = bookadd.sort((a, b) => b.rating - a.rating);
+            setDisplayData([...sortedPage]);
+        } else if (option === 'Number of Page') {
+            const sortedPage = bookadd.sort((a, b) => b.totalPages - a.totalPages);
+            setDisplayData([...sortedPage]);
+        } else if (option === 'Published year') {
+            const sortedPage = bookadd.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+            setDisplayData([...sortedPage]);
+        }
+    };
+
+    useEffect(() => {
+        const bookStoredInlc = getStoredBook();
+        if (bookStoredInlc.length > 0) {
+            const addedBook = books.filter(book => bookStoredInlc.includes(book.bookId));
+            setBookadd([...addedBook]);
+            setDisplayData([...addedBook]);
+        }
+    }, [books]);
 
     return (
         <>
-           
-            <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+           <div>
+                <div className="flex  justify-center items-center mb-8">
+                    <details className="dropdown">
+                        <summary className="m-1 btn">Sorted By <IoIosArrowDown /></summary>
+                        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-32">
+                            <li><button onClick={() => handleSort("Rating")}>Rating</button></li>
+                            <li><button onClick={() => handleSort("Number of Page")}>Number of Page</button></li>
+                            <li><button onClick={() => handleSort("Published year")}>Published year</button></li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+         <div className=''>
+         <Tabs  selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
                     <Tab>Read Book</Tab>
                     <Tab>Wishlist</Tab>
                 </TabList>
                 <TabPanel>
-                    <Readlist  />
+                    <Readlist displayData={displayData} />
                 </TabPanel>
                 <TabPanel>
-                    <Wishlist />
+                    <Wishlist displayData={displayData}/>
                 </TabPanel>
             </Tabs>
+         </div>
         </>
     );
 };
