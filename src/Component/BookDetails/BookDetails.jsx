@@ -22,7 +22,7 @@ const BookDetails = () => {
             <div className="card-body md:w-[55%] p-1 pt-2 pr-5 pl-10">
                 <div className='flex flex-col justify-between'>
                     <div className='border-b pt-1'>
-                        <h2 className="card-title pb-3 text-[40px] font-bold playfair">{book.bookName}</h2>
+                        <h2 className="card-title pb-3 text-2xl md:text-[40px] font-bold playfair">{book.bookName}</h2>
                         <p className='workSans text-lg font-medium py-2'>By : {book.author}</p>
                     </div>
                     <div className='border-b'>

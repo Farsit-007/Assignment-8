@@ -33,7 +33,7 @@ const PageToRead = () => {
     return (
         <div className='flex items-center w-full justify-center md:h-[550px] overflow-x-auto'> {/* Added overflow-x-auto here */}
             <BarChart 
-                width={bookadd.length * 200} 
+                width={bookadd.length * 250} 
                 height={500}
                 data={bookadd}
                 margin={{

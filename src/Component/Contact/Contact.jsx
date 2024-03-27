@@ -24,14 +24,14 @@ const Contact = () => {
     return (
         <div>
             <section className="py-6">
-                <div className="rounded-xl bg-slate-50 bg-cover" style={{ backgroundImage: `url(${bgg})` }}>
+                <div className="rounded-xl opacity-105 bg-slate-50 bg-cover" style={{ backgroundImage: `url(${bgg})` }}>
                     <div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 text-gray-900">
                         <h1 className="text-5xl font-bold leading-none sm:text-7xl xl:max-w-3xl text-white playfair">Contact</h1>
                         <p className="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl text-white workSans">Connect with us for book recommendations, collaborations, technical support, and more. We welcome your feedback and inquiries. Reach out and lets start a conversation</p>
 
                     </div>
                 </div>
-                <img src={bg3} width={400} alt="" className=" mx-auto mb-0 md:mb-10 -mt-[130px] md:-mt-[300px]  rounded-lg lg:-mt-[250px]" />
+                <img src={bg3} width={500} alt="" className=" mx-auto mb-0 md:mb-10 -mt-[130px] md:-mt-[300px]  rounded-lg lg:-mt-[250px]" />
             </section>
             <section className="py-20 mb-8 rounded-2xl dark:bg-gray-100 dark:text-gray-900">
                 <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
