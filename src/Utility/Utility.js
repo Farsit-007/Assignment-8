@@ -43,4 +43,19 @@ const savedBookDetails2 = (id) => {
     }
 };
 
-export {getStoredBook,savedBookDetails,savedBookDetails2,getStoredBook2}
+
+//For Form 
+const getStoredform =()=>{
+    const storedBook = localStorage.getItem('data');
+    if(storedBook){
+        return JSON.parse(storedBook);
+    }
+    return []
+}
+const savedData= (val) =>{
+    const sotreddata = getStoredBook();
+    sotreddata.push(val);
+    localStorage.setItem('data',JSON.stringify(sotreddata));
+}
+
+export {getStoredBook,savedBookDetails,savedBookDetails2,getStoredBook2,getStoredform,savedData}
