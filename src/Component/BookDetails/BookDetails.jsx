@@ -19,7 +19,7 @@ const BookDetails = () => {
             <div className="flex md:w-[45%] justify-center items-center rounded-xl  bg-[#F3F3F3]">
                 <img src={book.image} width={280} alt="" />
             </div>
-            <div className="card-body md:w-[55%] p-1 pt-2 pr-5 pl-10">
+            <div className="card-body md:w-[55%] p-1 pt-2 pr-4 md:pr-5 pl-4 md:pl-10">
                 <div className='flex flex-col justify-between'>
                     <div className='border-b pt-1'>
                         <h2 className="card-title pb-3 text-2xl md:text-[40px] font-bold playfair">{book.bookName}</h2>
